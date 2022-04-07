@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String n1 = num1.getText().toString();
-                int i = Integer.parseInt(n1);
+                double i = Double.parseDouble(n1);
                 String n2 = num2.getText().toString();
-                int j = Integer.parseInt(n2);
-                int output = i-j;
-                String o = Integer.toString(output);
+                double j =Double.parseDouble(n2);
+                double output = i-j;
+                String o = Double.toString(output);
                 result.setText(o);
                 SharedPreferences sharedPreferences = getSharedPreferences("output",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -64,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String n1 = num1.getText().toString();
-                int i = Integer.parseInt(n1);
+                double i = Double.parseDouble(n1);
                 String n2 = num2.getText().toString();
-                int j = Integer.parseInt(n2);
-                int output = i*j;
-                String o = Integer.toString(output);
+                double j = Double.parseDouble(n2);
+                double output = i*j;
+                String o = Double.toString(output);
                 result.setText(o);
                 SharedPreferences sharedPreferences = getSharedPreferences("output",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -80,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String n1 = num1.getText().toString();
-                int i = Integer.parseInt(n1);
+                double i = Double.parseDouble(n1);
                 String n2 = num2.getText().toString();
-                int j = Integer.parseInt(n2);
-                int output = 0;
+                double j = Double.parseDouble(n2);
+                double output = 0;
                 try{
                     output = i/j;
                 }
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("Divide by zero","error");
                     e.printStackTrace();
                 }
-                String o = Integer.toString(output);
+                String o = Double.toString(output);
                 result.setText(o);
                 SharedPreferences sharedPreferences = getSharedPreferences("output",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
